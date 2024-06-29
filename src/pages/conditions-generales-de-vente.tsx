@@ -57,7 +57,7 @@ export default function ConditionsGeneralesDeVente() {
         <p>ByteBuddies ne pourra être tenu responsable des retards ou manquements dus à des événements de force majeure (épidémies, grèves, catastrophes naturelles, etc.). En cas de force majeure, ByteBuddies peut suspendre ou résilier le contrat sans indemnité.</p>
 
         <h2>Article 13 – Droit applicable et juridiction compétente</h2>
-        <p>Les présentes conditions générales sont régies par le droit belge. En cas de litige, les parties s&apos;efforceront de trouver une solution amiable. À défaut, les tribunaux de Bruxelles seront seuls compétents pour régler le différend.</p>
+        <p>Les présentes conditions générales sont régies par le droit belge. En cas de litige, les parties s&apos;efforceront de trouver une solution amiable. À défaut, les tribunaux de l’arrondissement judiciaire du siège social de ByteBuddies.</p>
 
         <h2>Article 14 – Protection des données personnelles</h2>
         <p>ByteBuddies collecte et traite les données personnelles du CLIENT conformément à la législation en vigueur. Les données sont utilisées pour la gestion des commandes, la facturation, et les actions de prospection commerciale. Le CLIENT dispose d&apos;un droit d&apos;accès, de rectification et de suppression de ses données, qu&apos;il peut exercer en contactant ByteBuddies à l&apos;adresse email suivante : info@bytebuddies.com.</p>
