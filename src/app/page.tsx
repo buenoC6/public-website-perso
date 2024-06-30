@@ -1,95 +1,47 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import { Section } from '@/components/Section'
+import { Card } from '@chakra-ui/card'
+import { Select } from '@chakra-ui/select'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+    <main>
+      <div className="page-container">
+        <Section primary={true} id={'home'}>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Décrivez nous votre besoin, nous vous proposerons une solution sur
+            mesure
           </p>
-        </a>
+          <h1>Web, Desktop & Mobile</h1>
+          <Card padding={10} marginTop={10}>
+            <Select placeholder="Votre type d'application">
+              <option>Application web / SaaS</option>
+              <option>Application mobile</option>
+              <option>Site e-commerce</option>
+              <option>Marketplace</option>
+              <option>Site vitrine</option>
+              <option>Autre</option>
+            </Select>
+            <Select placeholder="Votre budget">
+              <option>- de 5000€</option>
+              <option>5000 - 10 000€</option>
+              <option>20 000 - 50 000€</option>
+              <option>+ de 50 000€</option>
+              <option>Autre</option>
+            </Select>
+            <Select placeholder="Votre délais de livraison">
+              <option>- de 1 mois</option>
+              <option>1 à 3 mois</option>
+              <option>3 à 6 mois</option>
+              <option>+ de 1 an</option>
+            </Select>
+            <button>Démarrez votre projet</button>
+          </Card>
+        </Section>
+        <Section primary={false} id={'services'}>
+          <h1>Nos services</h1>
+        </Section>
       </div>
     </main>
-  );
+  )
 }

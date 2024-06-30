@@ -1,5 +1,5 @@
 import React from 'react';
-export default function ConditionsGeneralesDeVente() {
+export default function Conditions() {
     return <>
         <h1>Conditions Générales de Vente</h1>
 
