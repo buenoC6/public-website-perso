@@ -12,8 +12,8 @@ export default function Home() {
             Décrivez nous votre besoin, nous vous proposerons une solution sur
             mesure
           </p>
-          <h1>Web, Desktop & Mobile</h1>
-          <Card padding={10} marginTop={10}>
+          <h2>Web, Desktop & Mobile</h2>
+          <Card padding={10}>
             <Select placeholder="Votre type d'application">
               <option>Application web / SaaS</option>
               <option>Application mobile</option>
@@ -39,7 +39,65 @@ export default function Home() {
           </Card>
         </Section>
         <Section primary={false} id={'services'}>
-          <h1>Nos services</h1>
+          <div className={'link-card-container'}>
+            <ul>
+              <li>
+                <h2>Nos services</h2>
+                <p>
+                  Création graphique, mise en place de votre site web ou devotre
+                  application mobile. Augmentation de votre présence dans les
+                  résultats des moteurs de recherche.
+                </p>
+                <button>Démarrez votre projet</button>
+              </li>
+              <li>
+                <h3>Site web</h3>
+                <p>
+                  Création de site web sur mesure, site vitrine, site
+                  e-commerce, marketplace, blog, etc.
+                </p>
+              </li>
+              <li>
+                <div>
+                  <h3>Application mobile</h3>
+                  <p>
+                    {
+                      "Création d'application mobile sur mesure, application mobile hybride, application mobile native, etc."
+                    }
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>SEO</h3>
+                  <p>
+                    Augmentation de votre présence dans les résultats des
+                    moteurs de recherche, optimisation de votre site web.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Marketing digital</h3>
+                  <p>
+                    {
+                      'Création de campagnes publicitaires, gestion de vos réseaux sociaux, etc.'
+                    }
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>Formation</h3>
+                  <p>
+                    {
+                      "Formation à la création de site web, à l'utilisation de votre application mobile, etc."
+                    }
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
         </Section>
       </div>
     </main>
