@@ -13,9 +13,12 @@ export default function Home() {
     <main>
       <div style={{ width: '100%' }}>
         <Section primary={true} id={'home'}>
-          <p className={'text-extra-light'}>
-            Décrivez nous votre besoin, nous vous proposerons une solution sur
-            mesure
+          <p
+            className={'text-extra-light'}
+            style={{ maxWidth: '600px', textAlign: 'center' }}
+          >
+            Décrivez nous votre besoin, nous vous proposerons une solution
+            dévelopée sur mesure par une équipe de professionnels passionés.
           </p>
           <h2>Web, Desktop & Mobile</h2>
           <Card
