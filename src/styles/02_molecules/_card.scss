@@ -34,7 +34,7 @@
         color: white;
         transform: translateY(50px);
       }
-      background: url("https://wallpapers.com/images/hd/open-notebook-cute-writing-coffee-ali8yhmo38lgdbb2.jpg") no-repeat center center;
+      background: black;
       background-size: cover;
       border-radius: 5px;
       color: white;
@@ -50,11 +50,11 @@
       p{
         font-size: 14px;
         opacity: 0;
-        transition: opacity 0.5s ease;
-        transition: transform 0.3s ease;
+        transition: all 0.5s ease;
         transform: translateY(50px)
       }
       &:hover{
+        background: $primaryColor;
         h3{
           transform: translateY(0);
         }

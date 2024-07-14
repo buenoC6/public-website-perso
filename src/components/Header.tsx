@@ -1,7 +1,21 @@
+'use client'
 import Link from 'next/link'
-import Image from 'next/image'
+import { useState } from 'react'
+import BurgerIcon from '@/components/common/BurgerIcon'
 
 export function Header() {
+  const [visibility, setVisibility] = useState<boolean>(false)
+
+  const toggleSlideout = () => {
+    if (visibility) {
+      // @ts-ignore
+      document.getElementById('reverse').beginElement()
+    } else {
+      // @ts-ignore
+      document.getElementById('start').beginElement()
+    }
+    setVisibility(!visibility)
+  }
   return (
     <header>
       <Link href={'/'} style={{ display: 'flex' }}>
@@ -32,9 +46,10 @@ export function Header() {
           </li>
         </ul>
       </nav>
-      <div>
-        <button>Démarrez votre projet</button>
-      </div>
+      <button>Démarrez votre projet</button>
+      <span className={'burger-menu'} onClick={toggleSlideout}>
+        <BurgerIcon />
+      </span>
     </header>
   )
 }

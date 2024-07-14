@@ -10,7 +10,7 @@
   font-size: 14px;
   font-family: $fontFamily;
   border: $border;
-  border-radius: 3px;
+  border-radius: 50px;
   cursor: pointer;
   transition: transform 0.2s ease;
   @include animate-translateY(-3px);
@@ -26,9 +26,9 @@ body button {
   @include button-style(white, none, $primaryColor);
 }
 
-@mixin heading-style($font-size, $margin-bottom) {
+@mixin heading-style($font-size, $margin-bottom, $font-weight) {
   color: $textColor;
-  font-weight: 700;
+  font-weight: $font-weight;
   margin-bottom: $margin-bottom;
   margin-top: $margin-bottom;
   line-height: 1.3;
@@ -37,33 +37,52 @@ body button {
 }
 
 body h1 {
-  @include heading-style(24px, 0);
+  @include heading-style(30px, 0, 600);
 }
 
 body h2 {
-  @include heading-style(20px, 2em);
+  @include heading-style(28px, 1em, 500);
 }
 
 body h3 {
-  @include heading-style(18px, 0);
+  @include heading-style(26px, 0, 400);
 }
 
 @mixin section-style($section-color) {
-  padding: 75px 20px;
-  background-color: $section-color;
+  padding: 30px;
+  background: $section-color;
   color: $textColor;
   >*{
     margin-right: auto;
     margin-left: auto;
-    padding: 0 15px;
-    max-width: 1200px;
+    padding: 0 30px;
+    text-align: center;
   }
+
+    @media screen and (min-width: 768px) {
+      padding: 75px 30px;
+      >*{
+        text-align: inherit;
+      }
+    }
 }
 
 body .section-primary {
-  @include section-style(transparent);
+  @include section-style($section-primary);
 }
 
 body .section-secondary {
   @include section-style($section-secondary);
+}
+
+@mixin text-color($color: $textColor) {
+  color: $color;
+}
+
+.text-extra-light {
+  @include text-color($text-extra-light-color);
+}
+
+.text-light {
+  @include text-color($text-light-color);
 }

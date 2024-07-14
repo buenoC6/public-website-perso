@@ -6,15 +6,15 @@ import { Select } from '@chakra-ui/select'
 export default function Home() {
   return (
     <main>
-      <div className="page-container">
+      <div style={{ width: '100%' }}>
         <Section primary={true} id={'home'}>
-          <p>
+          <p className={'text-extra-light'}>
             Décrivez nous votre besoin, nous vous proposerons une solution sur
             mesure
           </p>
           <h2>Web, Desktop & Mobile</h2>
-          <Card padding={10}>
-            <Select placeholder="Votre type d'application">
+          <Card padding={7} gap={5} width={'100%'} maxWidth={'600px'}>
+            <Select cursor={'pointer'} placeholder="Votre type d'application">
               <option>Application web / SaaS</option>
               <option>Application mobile</option>
               <option>Site e-commerce</option>
@@ -22,14 +22,14 @@ export default function Home() {
               <option>Site vitrine</option>
               <option>Autre</option>
             </Select>
-            <Select placeholder="Votre budget">
+            <Select cursor={'pointer'} placeholder="Votre budget">
               <option>- de 5000€</option>
               <option>5000 - 10 000€</option>
               <option>20 000 - 50 000€</option>
               <option>+ de 50 000€</option>
               <option>Autre</option>
             </Select>
-            <Select placeholder="Votre délais de livraison">
+            <Select cursor={'pointer'} placeholder="Votre délais de livraison">
               <option>- de 1 mois</option>
               <option>1 à 3 mois</option>
               <option>3 à 6 mois</option>
@@ -69,10 +69,11 @@ export default function Home() {
               </li>
               <li>
                 <div>
-                  <h3>SEO</h3>
+                  <h3>Référencement</h3>
                   <p>
-                    Augmentation de votre présence dans les résultats des
-                    moteurs de recherche, optimisation de votre site web.
+                    Augmentation et/ou amélioration de votre présence dans les
+                    résultats des moteurs de recherche, optimisation de votre
+                    site web.
                   </p>
                 </div>
               </li>
@@ -98,6 +99,12 @@ export default function Home() {
               </li>
             </ul>
           </div>
+        </Section>
+        <Section primary={true} id={'portfolio'}>
+          coucou
+        </Section>
+        <Section primary={false} id={'portfolio'}>
+          coucou
         </Section>
       </div>
     </main>

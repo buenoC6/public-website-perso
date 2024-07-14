@@ -5,12 +5,15 @@
 $fontFamily: 'Poppins', Helvetica, Arial, sans-serif;
 
 /* Body */
-$backgroundColor: #D2DBEE;
+$backgroundColor: #fd5243;
 
 /* Color: primary */
-$primaryColor: #0f76a9;
+$primaryColor: #004e98;
+
+/* Color: text */
 $textColor: #303030;
+$text-extra-light-color: rgba(#303030, 0.65);
+$text-light-color: rgba(#303030, 0.8);
 
-$section-primary: #ffffff;
-$section-secondary: rgba($primaryColor, 0.2);
-
+$section-primary: transparent;
+$section-secondary: transparent;
