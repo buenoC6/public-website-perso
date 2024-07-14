@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import '@/styles/main.scss'
 import { Chakra } from '@/components/Chakra'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body>
         <Header />
         <Chakra>{children}</Chakra>
+        <Footer />
       </body>
     </html>
   )

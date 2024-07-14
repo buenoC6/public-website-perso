@@ -2,7 +2,7 @@
 import { Section } from '@/components/Section'
 import { Card } from '@chakra-ui/card'
 import { Select } from '@chakra-ui/select'
-import { Stack } from '@chakra-ui/react'
+import { Box, Stack } from '@chakra-ui/react'
 
 export default function Home() {
   return (
@@ -115,10 +115,65 @@ export default function Home() {
           </div>
         </Section>
         <Section primary={true} id={'portfolio'}>
-          coucou
+          <h3>Nous travaillons ensemble</h3>
+          <div className={'link-card-container'}>
+            <ul>
+              <li>
+                <Card
+                  variant={'elevated'}
+                  borderRadius={20}
+                  shadow={'lg'}
+                  padding={7}
+                >
+                  <h2>Communication</h2>
+                  <p>
+                    Création graphique, mise en place de votre site web ou
+                    devotre application mobile. Augmentation de votre présence
+                    dans les résultats des moteurs de recherche.
+                  </p>
+                  <button>Démarrez votre projet</button>
+                </Card>
+              </li>
+              <li>
+                <Card
+                  variant={'elevated'}
+                  borderRadius={20}
+                  shadow={'lg'}
+                  padding={7}
+                >
+                  <h2>Méthode de travail agile</h2>
+                  <p>
+                    Création graphique, mise en place de votre site web ou
+                    devotre application mobile. Augmentation de votre présence
+                    dans les résultats des moteurs de recherche.
+                  </p>
+                  <button>Démarrez votre projet</button>
+                </Card>
+              </li>
+              <li>
+                <Card
+                  variant={'elevated'}
+                  borderRadius={20}
+                  shadow={'lg'}
+                  padding={7}
+                >
+                  <h2>Technologies</h2>
+                  <p>
+                    Création graphique, mise en place de votre site web ou
+                    devotre application mobile. Augmentation de votre présence
+                    dans les résultats des moteurs de recherche.
+                  </p>
+                  <button>Démarrez votre projet</button>
+                </Card>
+              </li>
+            </ul>
+          </div>
         </Section>
         <Section primary={false} id={'portfolio'}>
-          coucou
+          <h2>Des partenaires de confiance</h2>
+        </Section>
+        <Section primary={true} id={'portfolio'}>
+          <h2>Une équipe soudée</h2>
         </Section>
       </div>
     </main>
