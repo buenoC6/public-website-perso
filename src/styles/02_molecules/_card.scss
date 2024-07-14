@@ -1,12 +1,11 @@
 .link-card-container {
-  display: flex;
-  justify-content: center;
   list-style: none;
   ul{
     list-style: none;
-    li{
-      margin-bottom: 20px;
-    }
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     li:first-child{
       display: flex;
       flex-direction: column;
@@ -19,34 +18,34 @@
         margin-bottom: 1rem;
       }
     }
-    li:not(:first-child){
-      h3{
-        color: white;
-      }
-      padding: 50px;
-      position: relative;
-      background: #7393b9;
-      background-size: cover;
-      border-radius: 5px;
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 15px;
-      min-height: 300px;
-      transition: opacity 1s ease;
-      p{
-        font-size: 14px;
-      }
-    }
+  }
+}
+
+.link-card{
+  h3{
+    color: white;
+  }
+  max-width: 350px;
+  padding: 50px;
+  position: relative;
+  background: #7393b9;
+  background-size: cover;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  min-height: 300px;
+  transition: opacity 1s ease;
+  p{
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 992px){
   .link-card-container {
-    display: flex;
-    flex-wrap: wrap;
     list-style: none;
     padding-left: 0;
     ul{
@@ -67,51 +66,52 @@
           margin-bottom: 1rem;
         }
       }
-      li:not(:first-child){
-        position: relative;
-        :before{
-          content: '';
-          position: absolute;
-          top:0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: $primaryColor;
-          opacity: 0;
-        }
-        h3{
-          transition: transform 0.3s ease;
-          color: white;
-          transform: translateY(50px);
-        }
-        color: white;
-        flex: 0 0 33.3333%;
-        padding: 10px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 15px;
-        min-height: 366px;
-        transition: opacity 1s ease;
-        p{
-          font-size: 14px;
-          opacity: 0;
-          transition: all 0.5s ease;
-          transform: translateY(50px)
-        }
-        &:hover{
-          background: $primaryColor;
-          h3{
-            transform: translateY(0);
-          }
-          cursor: pointer;
-          p{
-            opacity: 1;
-            transform: translateY(0)
-          }
-        }
-      }
     }
   }
 }
+
+.link-card{
+    position: relative;
+    :before{
+      content: '';
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $primaryColor;
+      opacity: 0;
+    }
+    h3{
+      transition: transform 0.3s ease;
+      color: white;
+      transform: translateY(50px);
+    }
+    color: white;
+    flex: 0 0 33.3333%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    min-height: 366px;
+    transition: opacity 1s ease;
+    p{
+      font-size: 14px;
+      opacity: 0;
+      transition: all 0.5s ease;
+      transform: translateY(50px)
+    }
+    &:hover{
+      background: $primaryColor;
+      h3{
+        transform: translateY(0);
+      }
+      cursor: pointer;
+      p{
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+  }

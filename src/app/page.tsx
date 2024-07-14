@@ -2,7 +2,11 @@
 import { Section } from '@/components/Section'
 import { Card } from '@chakra-ui/card'
 import { Select } from '@chakra-ui/select'
-import { Box, Stack } from '@chakra-ui/react'
+import { Stack } from '@chakra-ui/react'
+import LinkCard from '@/components/common/LinkCard'
+import IconPerson from '@/components/icons/IconPerson'
+import IconReload from '@/components/icons/IconReload'
+import IconTachometerFast from '@/components/icons/IconFast'
 
 export default function Home() {
   return (
@@ -17,7 +21,7 @@ export default function Home() {
           <Card
             variant={'elevated'}
             borderRadius={20}
-            borderTop={'8px solid #FFD780'}
+            borderTop={'8px solid #004e98'}
             shadow={'lg'}
             padding={7}
             gap={5}
@@ -59,6 +63,7 @@ export default function Home() {
               <li>
                 <Card
                   variant={'elevated'}
+                  borderTop={'8px solid #004e98'}
                   borderRadius={20}
                   shadow={'lg'}
                   padding={7}
@@ -73,107 +78,136 @@ export default function Home() {
                 </Card>
               </li>
               <li>
-                <h3>Site web</h3>
-                <p>
-                  Création de site web sur mesure, site vitrine, site
-                  e-commerce, marketplace, blog, etc.
-                </p>
+                <LinkCard>
+                  <h3>Site web</h3>
+                  <p>
+                    Création de site web sur mesure, site vitrine, site
+                    e-commerce, marketplace, blog, etc.
+                  </p>
+                </LinkCard>
               </li>
               <li>
-                <h3>Application mobile</h3>
-                <p>
-                  {
-                    "Création d'application mobile sur mesure, application mobile hybride, application mobile native, etc."
-                  }
-                </p>
+                <LinkCard>
+                  <h3>Application mobile</h3>
+                  <p>
+                    {
+                      "Création d'application mobile sur mesure, application mobile hybride, application mobile native, etc."
+                    }
+                  </p>
+                </LinkCard>
               </li>
               <li>
-                <h3>Référencement</h3>
-                <p>
-                  Augmentation et/ou amélioration de votre présence dans les
-                  résultats des moteurs de recherche, optimisation de votre site
-                  web.
-                </p>
+                <LinkCard>
+                  <h3>Référencement</h3>
+                  <p>
+                    Augmentation et/ou amélioration de votre présence dans les
+                    résultats des moteurs de recherche, optimisation de votre
+                    site web.
+                  </p>
+                </LinkCard>
               </li>
               <li>
-                <h3>Marketing digital</h3>
-                <p>
-                  {
-                    'Création de campagnes publicitaires, gestion de vos réseaux sociaux, etc.'
-                  }
-                </p>
+                <LinkCard>
+                  <h3>Marketing digital</h3>
+                  <p>
+                    {
+                      'Création de campagnes publicitaires, gestion de vos réseaux sociaux, etc.'
+                    }
+                  </p>
+                </LinkCard>
               </li>
               <li>
-                <h3>Formation</h3>
-                <p>
-                  {
-                    "Formation à la création de site web, à l'utilisation de votre application mobile, etc."
-                  }
-                </p>
+                <LinkCard>
+                  <h3>Formation</h3>
+                  <p>
+                    {
+                      "Formation à la création de site web, à l'utilisation de votre application mobile, etc."
+                    }
+                  </p>
+                </LinkCard>
               </li>
             </ul>
           </div>
         </Section>
         <Section primary={true} id={'portfolio'}>
-          <h3>Nous travaillons ensemble</h3>
+          <h2>
+            Nous travaillons <span style={{ color: '#004e98' }}>ensemble</span>
+          </h2>
           <div className={'link-card-container'}>
             <ul>
               <li>
                 <Card
                   variant={'elevated'}
+                  borderTop={'8px solid #004e98'}
                   borderRadius={20}
                   shadow={'lg'}
+                  textAlign={'center'}
                   padding={7}
                 >
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <IconPerson width={'48px'} heigth={'48px'} />
+                  </div>
                   <h2>Communication</h2>
                   <p>
                     Création graphique, mise en place de votre site web ou
                     devotre application mobile. Augmentation de votre présence
                     dans les résultats des moteurs de recherche.
                   </p>
-                  <button>Démarrez votre projet</button>
                 </Card>
               </li>
               <li>
                 <Card
                   variant={'elevated'}
+                  borderTop={'8px solid #004e98'}
                   borderRadius={20}
                   shadow={'lg'}
+                  textAlign={'center'}
                   padding={7}
                 >
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <IconReload width={'48px'} heigth={'48px'} />
+                  </div>
                   <h2>Méthode de travail agile</h2>
                   <p>
                     Création graphique, mise en place de votre site web ou
                     devotre application mobile. Augmentation de votre présence
                     dans les résultats des moteurs de recherche.
                   </p>
-                  <button>Démarrez votre projet</button>
                 </Card>
               </li>
               <li>
                 <Card
                   variant={'elevated'}
+                  borderTop={'8px solid #004e98'}
                   borderRadius={20}
                   shadow={'lg'}
                   padding={7}
+                  textAlign={'center'}
                 >
+                  <div style={{ display: 'flex', justifyContent: 'center' }}>
+                    <IconTachometerFast width={'48px'} heigth={'48px'} />
+                  </div>
                   <h2>Technologies</h2>
                   <p>
                     Création graphique, mise en place de votre site web ou
                     devotre application mobile. Augmentation de votre présence
                     dans les résultats des moteurs de recherche.
                   </p>
-                  <button>Démarrez votre projet</button>
                 </Card>
               </li>
             </ul>
           </div>
         </Section>
         <Section primary={false} id={'portfolio'}>
-          <h2>Des partenaires de confiance</h2>
+          <h2>
+            Des partenaires de{' '}
+            <span style={{ color: '#004e98' }}>confiance</span>
+          </h2>
         </Section>
         <Section primary={true} id={'portfolio'}>
-          <h2>Une équipe soudée</h2>
+          <h2>
+            Une équipe <span style={{ color: '#004e98' }}>soudée</span>
+          </h2>
         </Section>
       </div>
     </main>
