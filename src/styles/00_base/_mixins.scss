@@ -37,16 +37,32 @@ body button {
 }
 
 body h1 {
-  @include heading-style(30px, 0, 600);
+  @include heading-style(24px, 0, 500);
 }
 
 body h2 {
-  @include heading-style(28px, 1em, 500);
+  @include heading-style(20px, 1em, 400);
 }
 
 body h3 {
-  @include heading-style(26px, 0, 400);
+  @include heading-style(18px, 0, 400);
 }
+
+@media screen and (min-width: 768px){
+  body h1 {
+    @include heading-style(26px, 0, 500);
+  }
+
+  body h2 {
+    @include heading-style(24px, 1em, 500);
+  }
+
+  body h3 {
+    @include heading-style(22px, 0, 400);
+  }
+}
+
+
 
 @mixin section-style($section-color) {
   padding: 30px;

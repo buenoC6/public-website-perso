@@ -20,9 +20,8 @@ export function Header() {
     <header>
       <Link href={'/'} style={{ display: 'flex' }}>
         <img
-          style={{ marginRight: '5px' }}
           height={32}
-          width={36}
+          width={46}
           src={
             'https://logowik.com/content/uploads/images/free-letter-b1342.jpg'
           }

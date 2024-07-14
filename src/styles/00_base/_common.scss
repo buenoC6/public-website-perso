@@ -14,7 +14,7 @@
 
 html body {
   font-family: $fontFamily;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 2rem;
   height: 100%;
   position: relative;
@@ -26,6 +26,12 @@ html body {
     display: flex;
     justify-content: center;
     position: relative;
+  }
+}
+
+@media screen and (min-width: 768px){
+  html body {
+    font-size: 16px;
   }
 }
 
