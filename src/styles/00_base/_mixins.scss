@@ -65,13 +65,17 @@ body h3 {
 
 
 @mixin section-style($section-color) {
-  padding: 75px 30px;
+  &:not(:first-child) {
+    padding: 75px 30px;
+    >*{
+      padding: 0 30px;
+    }
+  }
   background: $section-color;
   color: $textColor;
   >*{
     margin-right: auto;
     margin-left: auto;
-    padding: 0 30px;
     text-align: center;
   }
 

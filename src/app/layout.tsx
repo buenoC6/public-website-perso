@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import '@/styles/main.scss'
-import { Chakra } from '@/components/Chakra'
 import Footer from '@/components/Footer'
+import { PrimeReactProvider } from 'primereact/api'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,9 +14,19 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="theme-color" content="#fff" />
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="msapplication-TileColor" content="##007bff" />
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body>
         <Header />
-        <Chakra>{children}</Chakra>
+        <PrimeReactProvider value={{ unstyled: true }}>
+          {children}
+        </PrimeReactProvider>
         <Footer />
       </body>
     </html>

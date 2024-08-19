@@ -1,0 +1,7 @@
+fragment MediaFields on UploadFileRelationResponseCollection {
+    data {
+        attributes {
+            url
+        }
+    }
+}

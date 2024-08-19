@@ -3,28 +3,36 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "graphql": "yarn graphql-codegen --config codegen.yml",
+    "build:pre": "yarn ts-node ./build/scripts/prebuild.ts",
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn run build:pre && next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.2",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
     "framer-motion": "^11.2.12",
     "next": "14.2.4",
+    "primereact": "^10.8.2",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/typescript": "^4.0.9",
+    "@graphql-codegen/typescript-graphql-request": "^6.2.0",
+    "@graphql-codegen/typescript-operations": "^4.2.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0",
+    "graphql-tag": "^2.12.6",
     "prettier": "^3.2.5",
     "sass": "^1.77.6",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

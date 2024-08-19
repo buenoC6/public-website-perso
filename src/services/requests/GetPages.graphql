@@ -1,0 +1,42 @@
+query getPages($locale: I18NLocaleCode) {
+    pages(locale: $locale, pagination: { limit: 1000 }){
+        data {
+            attributes {
+                __typename
+                Pagename
+                Slug
+                SEO {
+                    Title
+                    Description
+                    Visible
+                }
+                Blocks {
+                    __typename
+                    ... on ComponentBlocksBlocksHero {
+                        Headline
+                        Content
+                        Media{
+                            ...MediaFields
+                        }
+                        Buttons{
+                            Label
+                            Variant
+                            Href
+                        }
+                    }
+                    ... on ComponentBlocksCardGroup {
+                        Card{
+                            Title
+                            Content
+                            Media{
+                                ...MediaFields
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
