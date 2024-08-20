@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import '@/styles/main.scss'
 import Footer from '@/components/Footer'
-import { PrimeReactProvider } from 'primereact/api'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,9 +23,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <PrimeReactProvider value={{ unstyled: true }}>
-          {children}
-        </PrimeReactProvider>
+        {children}
         <Footer />
       </body>
     </html>

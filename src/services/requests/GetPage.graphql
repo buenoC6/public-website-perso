@@ -5,6 +5,7 @@ query getPage($locale: I18NLocaleCode,$filters: PageFiltersInput) {
                 Blocks {
                     __typename
                     ... on ComponentBlocksBlocksHero {
+                        Disposition
                         Headline
                         Content
                         Media{

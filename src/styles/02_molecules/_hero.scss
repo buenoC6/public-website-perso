@@ -1,0 +1,53 @@
+.hero-block{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+
+  .image-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .content-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .button-container{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero-block {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 50px;
+
+    .content-container{
+      text-align: left;
+      .button-container{
+        justify-content: flex-start;
+      }
+    }
+  }
+}

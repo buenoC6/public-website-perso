@@ -37,28 +37,45 @@ body button {
 }
 
 body h1 {
-  @include heading-style(24px, 0, 500);
+  @include heading-style(28px, 0, 500);
 }
 
 body h2 {
-  @include heading-style(20px, 1em, 400);
+  @include heading-style(26px, 1em, 400);
 }
 
 body h3 {
-  @include heading-style(18px, 0, 400);
+  @include heading-style(24px, 0, 400);
 }
 
 @media screen and (min-width: 768px){
   body h1 {
-    @include heading-style(26px, 0, 500);
+    @include heading-style(32px, 0, 500);
   }
 
   body h2 {
-    @include heading-style(24px, 1em, 500);
+    @include heading-style(28px, 1em, 500);
   }
 
   body h3 {
-    @include heading-style(22px, 0, 400);
+    @include heading-style(24px, 0, 400);
+  }
+}
+
+@mixin paragraph-style($font-size, $margin-bottom) {
+  color: #666;
+  font-size: $font-size;
+  margin-bottom: $margin-bottom;
+  line-height: 1.6;
+}
+
+body p {
+  @include paragraph-style(16px, 1em);
+}
+
+@media screen and (min-width: 768px){
+  body p {
+    @include paragraph-style(18px, 1.5em);
   }
 }
 
@@ -66,11 +83,12 @@ body h3 {
 
 @mixin section-style($section-color) {
   &:not(:first-child) {
-    padding: 75px 30px;
+    padding: 50px 15px;
     >*{
       padding: 0 30px;
     }
   }
+  padding: 20px 15px 60px 15px;
   background: $section-color;
   color: $textColor;
   >*{
@@ -80,7 +98,14 @@ body h3 {
   }
 
     @media screen and (min-width: 768px) {
-      padding: 160px 30px;
+      &:not(:first-child) {
+        padding: 160px 30px;
+        >*{
+          padding: 0 30px;
+        }
+      }
+
+      padding: 45px 30px;
       >*{
         text-align: inherit;
       }

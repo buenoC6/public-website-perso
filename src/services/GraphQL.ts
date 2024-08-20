@@ -51,6 +51,7 @@ export type ComponentBlocksBlocksHero = {
   __typename?: 'ComponentBlocksBlocksHero';
   Buttons: Maybe<Array<Maybe<ComponentCommonButton>>>;
   Content: Maybe<Scalars['String']['output']>;
+  Disposition: Maybe<Enum_Componentblocksblockshero_Disposition>;
   Headline: Maybe<Scalars['String']['output']>;
   Media: Maybe<UploadFileRelationResponseCollection>;
   id: Scalars['ID']['output'];
@@ -171,6 +172,12 @@ export type DateTimeFilterInput = {
   or: InputMaybe<Array<InputMaybe<Scalars['DateTime']['input']>>>;
   startsWith: InputMaybe<Scalars['DateTime']['input']>;
 };
+
+export enum Enum_Componentblocksblockshero_Disposition {
+  Left = 'left',
+  Middle = 'middle',
+  Right = 'right'
+}
 
 export enum Enum_Componentcommonbutton_Variant {
   Primary = 'primary',
@@ -1265,7 +1272,7 @@ export type GetPageQueryVariables = Exact<{
 }>;
 
 
-export type GetPageQuery = { __typename?: 'Query', pages: { __typename?: 'PageEntityResponseCollection', data: Array<{ __typename?: 'PageEntity', attributes: { __typename?: 'Page', Blocks: Array<{ __typename: 'ComponentBlocksBlocksHero', Headline: string, Content: string, Media: { __typename?: 'UploadFileRelationResponseCollection', data: Array<{ __typename?: 'UploadFileEntity', attributes: { __typename?: 'UploadFile', url: string } }> }, Buttons: Array<{ __typename?: 'ComponentCommonButton', Label: string, Variant: Enum_Componentcommonbutton_Variant, Href: string }> } | { __typename: 'ComponentBlocksCardGroup', Card: Array<{ __typename?: 'ComponentCommonCard', Title: string, Content: string, Media: { __typename?: 'UploadFileRelationResponseCollection', data: Array<{ __typename?: 'UploadFileEntity', attributes: { __typename?: 'UploadFile', url: string } }> } }> } | { __typename: 'Error' }> } }> } };
+export type GetPageQuery = { __typename?: 'Query', pages: { __typename?: 'PageEntityResponseCollection', data: Array<{ __typename?: 'PageEntity', attributes: { __typename?: 'Page', Blocks: Array<{ __typename: 'ComponentBlocksBlocksHero', Disposition: Enum_Componentblocksblockshero_Disposition, Headline: string, Content: string, Media: { __typename?: 'UploadFileRelationResponseCollection', data: Array<{ __typename?: 'UploadFileEntity', attributes: { __typename?: 'UploadFile', url: string } }> }, Buttons: Array<{ __typename?: 'ComponentCommonButton', Label: string, Variant: Enum_Componentcommonbutton_Variant, Href: string }> } | { __typename: 'ComponentBlocksCardGroup', Card: Array<{ __typename?: 'ComponentCommonCard', Title: string, Content: string, Media: { __typename?: 'UploadFileRelationResponseCollection', data: Array<{ __typename?: 'UploadFileEntity', attributes: { __typename?: 'UploadFile', url: string } }> } }> } | { __typename: 'Error' }> } }> } };
 
 export type GetPagesQueryVariables = Exact<{
   locale: InputMaybe<Scalars['I18NLocaleCode']['input']>;
@@ -1304,6 +1311,7 @@ export const GetPageDocument = gql`
         Blocks {
           __typename
           ... on ComponentBlocksBlocksHero {
+            Disposition
             Headline
             Content
             Media {

@@ -12,14 +12,21 @@ export type CmsPageProps = {
 
 const getPage = cache(async function getPage(locale: string, url: string) {
   const client = getStrapiClient()
-  return (await client.getPage()).pages.data[0]
+  console.log('getPage', locale, url)
+
+  return (
+    // @ts-ignore
+    (await client.getPage({ locale: locale, filters: { Slug: { eq: url } } }))
+      .pages.data[0]
+  )
 })
 
 export default async function CmsPage({
   params: { language, p },
 }: CmsPageProps) {
   const cmsP = p?.map((item) => item)
-  const page = await getPage(language, '/' + (cmsP ? cmsP : ''))
+
+  const page = await getPage(language, '' + (cmsP ? cmsP : ''))
 
   return (
     <>
