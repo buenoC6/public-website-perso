@@ -12,7 +12,6 @@ export type CmsPageProps = {
 
 const getPage = cache(async function getPage(locale: string, url: string) {
   const client = getStrapiClient()
-  console.log('getPage', locale, url)
 
   return (
     // @ts-ignore
@@ -26,7 +25,7 @@ export default async function CmsPage({
 }: CmsPageProps) {
   const cmsP = p?.map((item) => item)
 
-  const page = await getPage(language, '' + (cmsP ? cmsP : ''))
+  const page = await getPage(language, '/' + (cmsP ? cmsP : ''))
 
   return (
     <>
@@ -48,7 +47,7 @@ export async function generateStaticParams() {
   for (const language of languages) {
     try {
       for (let page of await getPagesList(language)) {
-        dynamicRoutes.push(language + '/' + page.attributes.Slug)
+        dynamicRoutes.push(language + page.attributes.Slug)
       }
     } catch (missingLanguage) {
       console.error('MissingLanguage', language, missingLanguage)
