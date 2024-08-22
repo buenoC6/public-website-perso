@@ -66,6 +66,7 @@
 
     p{
       opacity: 0;
+      font-size: 16px;
     }
     &:after {
       content: '';
@@ -83,11 +84,9 @@
     &:hover {
       &:after {
         background-color: rgba($primaryColor, .9);
-        transition: background-color 0.2s ease;
       }
       p {
         opacity: 1;
-        font-size: 16px;
         transition: opacity 0.2s ease;
       }
     }
