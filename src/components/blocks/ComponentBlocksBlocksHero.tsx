@@ -1,7 +1,6 @@
 'use client'
 import { ComponentBlocksBlocksHero as Block } from '@/services/GraphQL'
 import { motion } from 'framer-motion'
-import { Button } from 'primereact/button'
 
 interface ComponentBlocksBlocksHeroProps {
   block: Block
