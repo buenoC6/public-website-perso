@@ -6,7 +6,7 @@ const {} = getConfiguration()
 
 export const getStrapiClient = () => {
   const client = new GraphQLClient(
-    new URL('/graphql', 'https://strapi.alexianmoins.com').toString()
+    new URL('/graphql', 'https://strapi.netbuddies.be').toString()
   )
   return getSdk(client)
 }

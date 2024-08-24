@@ -54,7 +54,7 @@ export function Header() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <ul>
-          {['Services', 'Références', 'Tarifications', 'Live demo'].map(
+          {['Services', 'Références', 'Tarifs', 'Contact'].map(
             (item, index) => (
               <motion.li key={item} whileTap={{ scale: 0.95 }}>
                 <Link href={'/'}>{item}</Link>

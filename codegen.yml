@@ -1,5 +1,5 @@
 overwrite: true
-schema: "https://strapi.alexianmoins.com/graphql"
+schema: "https://strapi.netbuddies.be/graphql"
 documents: "src/**/*.graphql"
 generates:
   src/services/GraphQL.ts:

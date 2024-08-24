@@ -1,2 +1,2 @@
-schema: "https://strapi.alexianmoins.com/graphql"
+schema: "https://strapi.netbuddies.be/graphql"
 documents: "src/**/*.{graphql,js,ts,jsx,tsx}"

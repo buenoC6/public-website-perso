@@ -17,11 +17,7 @@ export function ComponentBlocksBlocksHero({
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <img
-          src={
-            'https://images.unsplash.com/photo-1718136370125-3836f53f9709?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          }
-        />
+        <img src={block?.Media?.data[0]?.attributes?.url} />
       </motion.div>
 
       <motion.div
