@@ -1,6 +1,7 @@
+'use client'
 import { ComponentBlocksCardGroup as Block } from '@/services/GraphQL'
 import { Card } from '@/components/common/Card'
-import { FaBeer } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 interface ComponentBlocksCardGroupProps {
   block: Block
@@ -13,7 +14,12 @@ export function ComponentBlocksCardGroup({
     <div className={'card-group-block'}>
       <ul>
         {block.Card.map((card, index) => (
-          <li key={card.id}>
+          <motion.li
+            key={card.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }} // Applique un délai pour un effet de cascade
+          >
             <Card>
               {card.Media?.data[0]?.attributes?.url && (
                 <div className="image-container">
@@ -26,7 +32,7 @@ export function ComponentBlocksCardGroup({
               <h3>{card.Title}</h3>
               <p>{card.Content}</p>
             </Card>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>

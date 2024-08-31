@@ -61,13 +61,18 @@
     }
 
   .card {
-    .image-container img {
-    }
+    position: relative;
+    overflow: hidden;
 
-    p{
+    p {
       opacity: 0;
       font-size: 16px;
+      transform: translateY(50px);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      position: relative;
+      z-index: 2;
     }
+
     &:after {
       content: '';
       position: absolute;
@@ -79,15 +84,17 @@
       box-shadow: inset 0 10px 35px -10px rgba(0, 0, 0, 0.6);
       z-index: 1;
       border-radius: 5px;
+      transition: background-color 0.5s ease;
     }
 
     &:hover {
       &:after {
-        background-color: rgba($primaryColor, .85);
+        background-color: rgba($primaryColor, 0.85);
       }
+
       p {
         opacity: 1;
-        transition: opacity 0.2s ease;
+        transform: translateY(0);
       }
     }
   }

@@ -1,9 +1,10 @@
 @import 'src/styles/00_base/charte';
 
 // Mixins
+
 @mixin button-style($color, $border, $backgroundColor) {
   min-width: 160px;
-  background-color: $backgroundColor;
+  background-image: $backgroundColor;
   color: $color;
   padding: 10px 17.5px;
   font-weight: 500;
@@ -12,18 +13,21 @@
   border: $border;
   border-radius: 50px;
   cursor: pointer;
-  transition: transform 0.2s ease;
-  @include animate-translateY(-3px);
+  transition: transform 0.5s ease, background-position .75s ease; // Transition plus lente pour le dégradé
+  background-size: 200% 100%; // Double la taille du background pour permettre l'animation
+  background-position: 200% 50%; // Place le début du dégradé à gauche
+  @include animate-translateY();
 }
 
-@mixin animate-translateY($y) {
+@mixin animate-translateY() {
   &:hover {
-    transform: translateY($y);
+    transform: scale(1.05); // Ajoute un effet de mise à l'échelle
+    background-position: 100% 50%; // Déplace le dégradé vers la droite
   }
 }
 
 body button {
-  @include button-style(white, none, $primaryColor);
+  @include button-style(white, none, linear-gradient(90deg, $primaryColor, #021348));
 }
 
 @mixin heading-style($font-size, $margin-bottom, $font-weight) {
