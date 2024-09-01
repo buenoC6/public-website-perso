@@ -24,7 +24,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba($primaryColor, .9);
+    background-color: rgba(black, .75);
     z-index: 1;
     border-radius: 5px;
   }
@@ -60,7 +60,7 @@
   .card{
     h3{
       width: fit-content;
-      background-color: rgba(black, 0.25);
+      background-color: rgba(black, 0.4);
     }
   }
 
@@ -93,7 +93,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba($primaryColor, 0.2);
+      background-color: rgba(black, .3);
       box-shadow: inset 0 10px 35px -10px rgba(0, 0, 0, 0.6);
       z-index: 1;
       border-radius: 5px;
@@ -102,7 +102,7 @@
 
     &:hover {
       &:after {
-        background-color: rgba($primaryColor, 0.85);
+        background-color: rgba(black, .75);
       }
 
       p {

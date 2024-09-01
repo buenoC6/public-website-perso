@@ -40,28 +40,28 @@ body button {
   max-width: 500px;
 }
 
-body h1 {
+h1 {
   @include heading-style(28px, 0, 500);
 }
 
-body h2 {
+h2 {
   @include heading-style(26px, 1em, 400);
 }
 
-body h3 {
+h3 {
   @include heading-style(24px, 0, 400);
 }
 
 @media screen and (min-width: 768px){
-  body h1 {
+  h1 {
     @include heading-style(32px, 0, 500);
   }
 
-  body h2 {
+  h2 {
     @include heading-style(28px, 1em, 500);
   }
 
-  body h3 {
+  h3 {
     @include heading-style(24px, 0, 400);
   }
 }
@@ -85,16 +85,18 @@ body p {
 
 
 
-@mixin section-style($section-color) {
+@mixin section-style($section-color, $color) {
   &:not(:first-child) {
     padding: 50px 15px;
     >*{
-      padding: 0 30px;
+      padding: 20px 30px;
     }
+  }
+  h2{
+    color: $color;
   }
   padding: 20px 15px 60px 15px;
   background: $section-color;
-  color: $textColor;
   >*{
     margin-right: auto;
     margin-left: auto;
@@ -103,13 +105,12 @@ body p {
 
     @media screen and (min-width: 768px) {
       &:not(:first-child) {
-        padding: 160px 30px;
-        >*{
-          padding: 0 30px;
-        }
+        padding: 120px 30px;
       }
-
-      padding: 45px 30px;
+      h2{
+        color: $color;
+      }
+      padding: 75px 30px 110px 30px;
       >*{
         text-align: inherit;
       }
@@ -117,11 +118,11 @@ body p {
 }
 
 body .section-primary {
-  @include section-style($section-primary);
+  @include section-style($section-primary, $textColor);
 }
 
 body .section-secondary {
-  @include section-style($section-secondary);
+  @include section-style($section-secondary, white);
 }
 
 @mixin text-color($color: $textColor) {
