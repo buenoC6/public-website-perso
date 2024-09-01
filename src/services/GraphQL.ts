@@ -74,6 +74,7 @@ export type ComponentBlocksBlocksHeroMediaArgs = {
 export type ComponentBlocksCardGroup = {
   __typename?: 'ComponentBlocksCardGroup';
   Card: Maybe<Array<Maybe<ComponentCommonCard>>>;
+  Title: Maybe<Scalars['String']['output']>;
   id: Scalars['ID']['output'];
 };
 
@@ -1272,7 +1273,7 @@ export type GetPageQueryVariables = Exact<{
 }>;
 
 
-export type GetPageQuery = { __typename?: 'Query', pages: { __typename?: 'PageEntityResponseCollection', data: Array<{ __typename?: 'PageEntity', attributes: { __typename?: 'Page', Blocks: Array<{ __typename: 'ComponentBlocksBlocksHero', Disposition: Enum_Componentblocksblockshero_Disposition, Headline: string, Content: string, Media: { __typename?: 'UploadFileRelationResponseCollection', data: Array<{ __typename?: 'UploadFileEntity', attributes: { __typename?: 'UploadFile', url: string } }> }, Buttons: Array<{ __typename?: 'ComponentCommonButton', Label: string, Variant: Enum_Componentcommonbutton_Variant, Href: string }> } | { __typename: 'ComponentBlocksCardGroup', Card: Array<{ __typename?: 'ComponentCommonCard', Title: string, Content: string, Media: { __typename?: 'UploadFileRelationResponseCollection', data: Array<{ __typename?: 'UploadFileEntity', attributes: { __typename?: 'UploadFile', url: string } }> } }> } | { __typename: 'Error' }> } }> } };
+export type GetPageQuery = { __typename?: 'Query', pages: { __typename?: 'PageEntityResponseCollection', data: Array<{ __typename?: 'PageEntity', attributes: { __typename?: 'Page', Blocks: Array<{ __typename: 'ComponentBlocksBlocksHero', Disposition: Enum_Componentblocksblockshero_Disposition, Headline: string, Content: string, Media: { __typename?: 'UploadFileRelationResponseCollection', data: Array<{ __typename?: 'UploadFileEntity', attributes: { __typename?: 'UploadFile', url: string } }> }, Buttons: Array<{ __typename?: 'ComponentCommonButton', Label: string, Variant: Enum_Componentcommonbutton_Variant, Href: string }> } | { __typename: 'ComponentBlocksCardGroup', Title: string, Card: Array<{ __typename?: 'ComponentCommonCard', Title: string, Content: string, Media: { __typename?: 'UploadFileRelationResponseCollection', data: Array<{ __typename?: 'UploadFileEntity', attributes: { __typename?: 'UploadFile', url: string } }> } }> } | { __typename: 'Error' }> } }> } };
 
 export type GetPagesQueryVariables = Exact<{
   locale: InputMaybe<Scalars['I18NLocaleCode']['input']>;
@@ -1324,6 +1325,7 @@ export const GetPageDocument = gql`
             }
           }
           ... on ComponentBlocksCardGroup {
+            Title
             Card {
               Title
               Content

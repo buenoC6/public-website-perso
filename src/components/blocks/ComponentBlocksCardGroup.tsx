@@ -12,6 +12,7 @@ export function ComponentBlocksCardGroup({
 }: ComponentBlocksCardGroupProps) {
   return (
     <div className={'card-group-block'}>
+      <h2>{block.Title}</h2>
       <ul>
         {block.Card.map((card, index) => (
           <motion.li

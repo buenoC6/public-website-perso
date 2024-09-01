@@ -18,6 +18,7 @@ query getPage($locale: I18NLocaleCode,$filters: PageFiltersInput) {
                         }
                     }
                     ... on ComponentBlocksCardGroup {
+                    Title
                         Card{
                             Title
                             Content

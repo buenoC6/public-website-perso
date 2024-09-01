@@ -28,7 +28,7 @@ export function ComponentBlocksBlocksHero({
       >
         <h2>{block.Headline}</h2>
 
-        <p>{block.Content}</p>
+        <p dangerouslySetInnerHTML={{ __html: block.Content }}></p>
 
         <div className={'button-container'}>
           {block.Buttons.map((button) => (

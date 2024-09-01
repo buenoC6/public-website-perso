@@ -24,8 +24,8 @@ const SvgWaves = () => (
   >
     <defs>
       <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-        <stop stop-color="rgba(245, 247, 250, 1)" offset="0%"></stop>
-        <stop stop-color="rgba(195, 207, 226, 1)" offset="100%"></stop>
+        <stop stopColor="rgba(245, 247, 250, 1)" offset="0%"></stop>
+        <stop stopColor="rgba(195, 207, 226, 1)" offset="100%"></stop>
       </linearGradient>
     </defs>
     <path
@@ -35,8 +35,8 @@ const SvgWaves = () => (
     ></path>
     <defs>
       <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
-        <stop stop-color="rgba(195, 207, 226, 1)" offset="0%"></stop>
-        <stop stop-color="rgba(245, 247, 250, 1)" offset="100%"></stop>
+        <stop stopColor="rgba(195, 207, 226, 1)" offset="0%"></stop>
+        <stop stopColor="rgba(245, 247, 250, 1)" offset="100%"></stop>
       </linearGradient>
     </defs>
     <path
@@ -46,8 +46,8 @@ const SvgWaves = () => (
     ></path>
     <defs>
       <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
-        <stop stop-color="rgba(245, 247, 250, 1)" offset="0%"></stop>
-        <stop stop-color="rgba(195, 207, 226, 1)" offset="100%"></stop>
+        <stop stopColor="rgba(245, 247, 250, 1)" offset="0%"></stop>
+        <stop stopColor="rgba(195, 207, 226, 1)" offset="100%"></stop>
       </linearGradient>
     </defs>
     <path
