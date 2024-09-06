@@ -16,4 +16,4 @@ $text-extra-light-color: rgba(#303030, 0.65);
 $text-light-color: rgba(#303030, 0.8);
 
 $section-primary: transparent;
-$section-secondary: linear-gradient(90deg, $primaryColor, #021348);
+$section-secondary: linear-gradient(90deg, rgba($primaryColor, 1), rgba(#021348, 1));
