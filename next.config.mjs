@@ -9,7 +9,7 @@ const nextConfig = {
             headers:[{
                 key:"content-security-policy",
                 value:"" +
-                    "default-src 'self' https://api.axept.io https://netbuddies.be data: ;" +
+                    "default-src 'self' https://api.axept.io https://netbuddies.be ;" +
                     " style-src 'self' 'unsafe-inline' fonts.googleapis.com;" +
                     " base-uri 'none';" +
                     " form-action 'self';" +
