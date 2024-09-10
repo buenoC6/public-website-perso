@@ -14,7 +14,7 @@
 
     img{
       width: 100%;
-      max-width: 600px;
+      max-width: 400px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -44,10 +44,26 @@
     gap: 50px;
     padding: 0 0px;
 
+    .image-container{
+      img{
+        max-width: 475px;
+      }
+    }
+
     .content-container{
       text-align: left;
       .button-container{
         justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .hero-block {
+    .image-container {
+      img {
+        max-width: 600px;
       }
     }
   }

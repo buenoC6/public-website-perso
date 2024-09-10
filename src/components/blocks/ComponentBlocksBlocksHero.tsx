@@ -1,6 +1,7 @@
 'use client'
 import { ComponentBlocksBlocksHero as Block } from '@/services/GraphQL'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 interface ComponentBlocksBlocksHeroProps {
   block: Block
@@ -32,7 +33,9 @@ export function ComponentBlocksBlocksHero({
 
         <div className={'button-container'}>
           {block.Buttons.map((button) => (
-            <motion.button key={button.id}>{button.Label}</motion.button>
+            <Link key={button.id} href={button.Href}>
+              <motion.button>{button.Label}</motion.button>
+            </Link>
           ))}
         </div>
       </motion.div>

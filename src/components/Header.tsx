@@ -23,10 +23,7 @@ export function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Link
-        href={'/background.png'}
-        style={{ display: 'flex', alignItems: 'center' }}
-      >
+      <Link href={'/fr'} style={{ display: 'flex', alignItems: 'center' }}>
         <img
           height={30}
           width={44}
@@ -54,17 +51,18 @@ export function Header() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <ul>
-          {['Services', 'Références', 'Tarifs', 'Contact'].map(
-            (item, index) => (
-              <motion.li key={item} whileTap={{ scale: 0.95 }}>
-                <Link href={'/'}>{item}</Link>
-              </motion.li>
-            )
-          )}
+          <motion.li whileTap={{ scale: 0.95 }}>
+            <Link href={'/fr/references'}>{'Références'}</Link>
+          </motion.li>
+          <motion.li whileTap={{ scale: 0.95 }}>
+            <Link href={'/fr/contact'}>{'Contact'}</Link>
+          </motion.li>
         </ul>
       </motion.nav>
 
-      <motion.button>Démarrez votre projet</motion.button>
+      <Link href={'mailto:contact@netbuddies.be'}>
+        <motion.button>Démarrez votre projet</motion.button>
+      </Link>
 
       <motion.span
         className={'burger-menu'}
@@ -75,7 +73,7 @@ export function Header() {
         whileTap={{ scale: 1.1 }}
         style={{ cursor: 'pointer', height: '37px' }}
       >
-        <BurgerIcon />
+        {/*<BurgerIcon />*/}
       </motion.span>
     </motion.header>
   )
