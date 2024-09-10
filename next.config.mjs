@@ -9,7 +9,7 @@ const nextConfig = {
             headers:[{
                 key:"content-security-policy",
                 value:"" +
-                    "default-src 'self' data: ;" +
+                    "default-src 'self' https://api.axept.io https://netbuddies.be data: ;" +
                     " style-src 'self' 'unsafe-inline' fonts.googleapis.com;" +
                     " base-uri 'none';" +
                     " form-action 'self';" +
@@ -20,8 +20,8 @@ const nextConfig = {
                     " https://strapi.netbuddies.be " +
                     " data:" +
                     " https://ik.imagekit.io" +
-                    " connect-src 'self' https://matomo.alexianmoins.be https://api.axept.io https://netbuddies.be; " +
-                    " script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://static.axept.io/sdk.js ;"
+                    " connect-src 'self' https://matomo.alexianmoins.be https://api.axept.io https://netbuddies.be https://client.axept.io; " +
+                    " script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://static.axept.io/sdk.js https://netbuddies.be ;"
             }]
         }]
     },
