@@ -13,7 +13,7 @@ const nextConfig = {
                     " style-src 'self' 'unsafe-inline' fonts.googleapis.com;" +
                     " base-uri 'none';" +
                     " form-action 'self';" +
-                    " script-src 'self' 'unsafe-eval' 'unsafe-inline';" +
+                    " script-src 'self' https://matomo.alexianmoins.be https://client.axept.io;" +
                     " font-src 'self' fonts.gstatic.com;" +
                     " manifest-src 'self';" +
                     " img-src 'self' blob: " +
