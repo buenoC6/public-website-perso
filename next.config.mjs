@@ -17,11 +17,11 @@ const nextConfig = {
                     " font-src 'self' fonts.gstatic.com;" +
                     " manifest-src 'self';" +
                     " img-src 'self' blob: " +
-                    " https://strapi.netbuddies.be" +
-                    " script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://static.axept.io/sdk.js ;" +
+                    " https://strapi.netbuddies.be " +
                     " data:" +
                     " https://ik.imagekit.io" +
-                    " connect-src 'self' https://matomo.alexianmoins.be https://api.axept.io https://netbuddies.be; "
+                    " connect-src 'self' https://matomo.alexianmoins.be https://api.axept.io https://netbuddies.be; " +
+                    " script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://static.axept.io/sdk.js ;"
             }]
         }]
     },
