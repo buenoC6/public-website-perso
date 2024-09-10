@@ -18,9 +18,10 @@ const nextConfig = {
                     " manifest-src 'self';" +
                     " img-src 'self' blob: " +
                     " https://strapi.netbuddies.be" +
+                    " script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://static.axept.io/sdk.js ;" +
                     " data:" +
                     " https://ik.imagekit.io" +
-                    " connect-src 'self' https://matomo.alexianmoins.be https://api.axept.io;"
+                    " connect-src 'self' https://matomo.alexianmoins.be https://api.axept.io https://netbuddies.be; "
             }]
         }]
     },
