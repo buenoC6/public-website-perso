@@ -14,11 +14,11 @@ const nextConfig = {
                         style-src 'self' 'unsafe-inline' fonts.googleapis.com;
                         base-uri 'none';
                         form-action 'self';
-                        script-src 'self' https://matomo.alexianmoins.be https://matomo.netbuddies.be https://client.axept.io https://static.axept.io 'unsafe-inline' 'unsafe-eval';
+                        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://matomo.netbuddies.be https://client.axept.io https://static.axept.io;
                         font-src 'self' fonts.gstatic.com;
                         manifest-src 'self';
                         img-src 'self' blob: data: https://strapi.netbuddies.be https://ik.imagekit.io;
-                        connect-src 'self' https://matomo.alexianmoins.be https://matomo.netbuddies.be https://api.axept.io https://netbuddies.be https://client.axept.io;
+                        connect-src 'self' https://matomo.netbuddies.be https://api.axept.io https://netbuddies.be https://client.axept.io;
                         worker-src 'self' https://client.axept.io;
                         child-src 'self' https://client.axept.io;
                         frame-src 'self' https://client.axept.io;
