@@ -21,7 +21,7 @@ const nextConfig = {
                     " data:" +
                     " https://ik.imagekit.io" +
                     " connect-src 'self' https://matomo.alexianmoins.be https://api.axept.io https://netbuddies.be https://client.axept.io; " +
-                    " script-src-elem 'self' https://static.axept.io/sdk.js https://netbuddies.be ;"
+                    " script-src-elem 'self' 'unsafe-inline' 'unsafe-eval' https://static.axept.io/sdk.js https://netbuddies.be ;"
             }]
         }]
     },
