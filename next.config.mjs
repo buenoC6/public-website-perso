@@ -20,7 +20,7 @@ const nextConfig = {
                     " https://strapi.netbuddies.be" +
                     " data:" +
                     " https://ik.imagekit.io" +
-                    " connect-src 'self' https://matomo.alexianmoins.be;"
+                    " connect-src 'self' https://matomo.alexianmoins.be https://api.axept.io/;"
             }]
         }]
     },
