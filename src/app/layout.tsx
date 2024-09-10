@@ -21,6 +21,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="##007bff" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#ffffff" />
+        <script defer src="/scripts/matomo.js" />
         <title>NetBuddies</title>
       </head>
       <body>
