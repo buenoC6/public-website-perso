@@ -21,7 +21,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="##007bff" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body>
+      <body style={{ position: 'relative' }}>
         <Header />
         {children}
         <Footer />

@@ -5,10 +5,11 @@
 @mixin button-style($color, $border, $backgroundColor) {
   min-width: 160px;
   background-image: $backgroundColor;
+  background: $backgroundColor;
   color: $color;
   padding: 10px 17.5px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 20px;
   font-family: $fontFamily;
   border: $border;
   border-radius: 50px;
@@ -26,8 +27,11 @@
   }
 }
 
-body button {
+body button:not(.outline) {
   @include button-style(white, none, linear-gradient(90deg, $primaryColor, #021348));
+}
+body button,.outline {
+  @include button-style(white, 1px solid white, transparent);
 }
 
 @mixin heading-style($font-size, $margin-bottom, $font-weight) {
@@ -37,7 +41,6 @@ body button {
   margin-top: $margin-bottom;
   line-height: 1.3;
   font-size: $font-size;
-  max-width: 500px;
 }
 
 h1 {

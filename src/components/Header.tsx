@@ -27,22 +27,12 @@ export function Header() {
         href={'/background.png'}
         style={{ display: 'flex', alignItems: 'center' }}
       >
-        <img
-          height={30}
-          width={44}
-          src={'/background.png'}
-          alt={'NetBuddies'}
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center',
-            transform: 'scale(1.15)',
-          }}
-        />
+        <img height={30} src={'/background.png'} alt={'NetBuddies'} />
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          style={{ marginLeft: '10px', fontSize: '1.5rem', color: '#333' }}
+          style={{ marginLeft: '10px', fontSize: '24px', color: 'white' }}
         >
           NetBuddies
         </motion.h1>
@@ -54,17 +44,15 @@ export function Header() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <ul>
-          {['Services', 'Références', 'Tarifs', 'Contact'].map(
-            (item, index) => (
-              <motion.li key={item} whileTap={{ scale: 0.95 }}>
-                <Link href={'/'}>{item}</Link>
-              </motion.li>
-            )
-          )}
+          {['Produits', 'Références', 'Equipe', 'Tarifs'].map((item, index) => (
+            <motion.li key={item} whileTap={{ scale: 0.95 }}>
+              <Link href={'/'}>{item}</Link>
+            </motion.li>
+          ))}
         </ul>
       </motion.nav>
 
-      <motion.button>Démarrez votre projet</motion.button>
+      <motion.button className={'outline'}>Demander une démo</motion.button>
 
       <motion.span
         className={'burger-menu'}

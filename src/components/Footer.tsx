@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer style={{ display: 'grid' }}>
+    <footer style={{ display: 'gri&d' }}>
       <SvgWaves />
       <div
         style={{
@@ -25,9 +25,7 @@ export default function Footer() {
           <li style={{ flex: '1 1 250px', textAlign: 'center' }}>
             Politique de confidentialité
           </li>
-          <li style={{ flex: '1 1 250px', textAlign: 'center' }}>
-            ByteBuddies
-          </li>
+          <li style={{ flex: '1 1 250px', textAlign: 'center' }}>NetBuddies</li>
         </ul>
         <hr style={{ margin: '30px 0px' }} />
         <div style={{ textAlign: 'center', margin: '0px' }}>
