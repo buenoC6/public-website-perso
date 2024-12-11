@@ -1,57 +1,35 @@
-import Link from 'next/link'
-
 export default function Footer() {
   return (
-    <footer>
+    <footer style={{ display: 'gri&d' }}>
       <SvgWaves />
       <div
         style={{
-          backgroundColor: '#004e98',
-          padding: '50px 20px 20px 20px',
+          color: 'white !important',
+          padding: '20px',
           margin: '0px',
+          backgroundColor: '#004e98',
         }}
       >
-        <div
+        <ul
           style={{
+            width: '100%',
             display: 'flex',
-            justifyContent: 'center',
+            listStyle: 'none',
+            gap: '25px',
+            flexWrap: 'wrap',
           }}
         >
-          <ul
-            style={{
-              color: 'white',
-              width: '100%',
-              maxWidth: '1200px',
-              display: 'flex',
-              listStyle: 'none',
-              gap: '25px',
-              flexWrap: 'wrap',
-            }}
-          >
-            <Link
-              href={'/conditions-generales-de-vente'}
-              style={{ flex: '1 1 250px', textAlign: 'center' }}
-            >
-              Conditions générales
-            </Link>
-            <li style={{ flex: '1 1 250px', textAlign: 'center' }}>
-              Politique de confidentialité
-            </li>
-            <li style={{ flex: '1 1 250px', textAlign: 'center' }}>
-              <Link href={'mailto:contact@netbuddies.be'}>
-                contact@netbuddies.be
-              </Link>
-            </li>
-            <li style={{ flex: '1 1 250px', textAlign: 'center' }}>
-              <div>+32 485 73 80 56</div>
-            </li>
-          </ul>
-        </div>
-        <hr style={{ margin: '60px 0px 40px 0px' }} />
-        <div
-          style={{ textAlign: 'center', margin: '20px 0px', color: 'white' }}
-        >
-          <span>© 2024 NetBuddies</span>
+          <li style={{ flex: '1 1 250px', textAlign: 'center' }}>
+            Conditions générales
+          </li>
+          <li style={{ flex: '1 1 250px', textAlign: 'center' }}>
+            Politique de confidentialité
+          </li>
+          <li style={{ flex: '1 1 250px', textAlign: 'center' }}>NetBuddies</li>
+        </ul>
+        <hr style={{ margin: '30px 0px' }} />
+        <div style={{ textAlign: 'center', margin: '0px' }}>
+          <span>© 2021 ByteBuddies</span>
         </div>
       </div>
     </footer>
@@ -61,11 +39,7 @@ export default function Footer() {
 const SvgWaves = () => (
   <svg
     id="wave"
-    style={{
-      transform: 'rotate(0deg)',
-      transition: '0.3',
-      marginBottom: '-12px',
-    }}
+    style={{ transform: 'rotate(0deg)', transition: '0.3' }}
     viewBox="0 0 1440 170"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

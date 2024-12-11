@@ -24,7 +24,7 @@ export default function RootLayout({
         <script defer src="/scripts/matomo.js" />
         <title>NetBuddies</title>
       </head>
-      <body>
+      <body style={{ position: 'relative' }}>
         <Header />
         {children}
         <Footer />
