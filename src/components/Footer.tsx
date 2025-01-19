@@ -5,7 +5,7 @@ export default function Footer() {
       <div
         style={{
           color: 'white !important',
-          padding: '20px',
+          padding: '40px',
           margin: '0px',
           backgroundColor: '#004e98',
         }}
