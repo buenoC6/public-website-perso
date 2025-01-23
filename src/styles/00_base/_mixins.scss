@@ -2,14 +2,14 @@
 
 // Mixins
 
-@mixin button-style($color, $border, $backgroundColor) {
+@mixin button-style($color, $border, $backgroundColor, $fontSize) {
   min-width: 160px;
   background-image: $backgroundColor;
   background: $backgroundColor;
   color: $color;
   padding: 10px 17.5px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: $fontSize;
   font-family: $fontFamily;
   border: $border;
   border-radius: 50px;
@@ -21,17 +21,14 @@
 }
 
 @mixin animate-translateY() {
-  &:hover {
-    transform: scale(1.05); // Ajoute un effet de mise à l'échelle
-    background-position: 100% 50%; // Déplace le dégradé vers la droite
-  }
+
 }
 
 body button:not(.outline) {
-  @include button-style(white, none, linear-gradient(90deg, $primaryColor, #021348));
+  @include button-style(white, none, linear-gradient(90deg, $primaryColor, #021348), 20px);
 }
 body button,.outline {
-  @include button-style(white, 1px solid white, transparent);
+  @include button-style(white, 1px solid white, transparent, 20px);
 }
 
 @mixin heading-style($font-size, $margin-bottom, $font-weight) {
@@ -44,24 +41,24 @@ body button,.outline {
 }
 
 h1 {
-  @include heading-style(28px, 0, 500);
+  @include heading-style(24px, 0, 500);
 }
 
 h2 {
-  @include heading-style(26px, 1em, 400);
+  @include heading-style(22px, 1em, 400);
 }
 
 h3 {
-  @include heading-style(24px, 0, 400);
+  @include heading-style(20px, 0, 400);
 }
 
 @media screen and (min-width: 768px){
   h1 {
-    @include heading-style(32px, 0, 500);
+    @include heading-style(28px, 0, 500);
   }
 
   h2 {
-    @include heading-style(28px, 1em, 500);
+    @include heading-style(26px, 1em, 500);
   }
 
   h3 {
@@ -90,10 +87,6 @@ body p {
 
 @mixin section-style($section-color, $color) {
   &:not(:first-child) {
-    //Shadow inset
-    -webkit-box-shadow: inset 0px 40px 24px -15px rgba(0,0,0,0.42);
-    -moz-box-shadow: inset 0px 40px 24px -15px rgba(0,0,0,0.42);
-    box-shadow: inset 0px 40px 24px -15px rgba(0,0,0,0.42);
     padding: 50px 15px;
     >*{
       padding: 20px 0px;

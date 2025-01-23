@@ -1,35 +1,339 @@
+'use client'
+import { Section } from '@/components/Section'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+
 export default function Footer() {
   return (
-    <footer style={{ display: 'gri&d' }}>
+    <footer style={{ display: 'grid' }}>
+      <div
+        style={{
+          padding: '120px 30px;',
+          backgroundColor: '#F3F4F6',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1200px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          <h2 style={{ marginBottom: 50 }}>Faites le premier pas</h2>
+          <textarea
+            style={{
+              width: '100%',
+              fontSize: 28,
+              color: 'rgba(0,0,0,0.25)',
+              padding: '15px 30px',
+              fontFamily: 'Poppins',
+              border: 'none',
+              borderRadius: 20,
+              height: 250,
+              marginBottom: 50,
+            }}
+            placeholder={'Décrivez-nous votre projet'}
+          ></textarea>
+
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              gap: 50,
+              height: 70,
+            }}
+          >
+            <input
+              style={{
+                width: '100%',
+                fontSize: 28,
+                color: 'rgba(0,0,0,0.25)',
+                padding: '15px 30px',
+                fontFamily: 'Poppins',
+                border: 'none',
+                borderRadius: 20,
+              }}
+              placeholder={'Email *'}
+            />{' '}
+            <button
+              style={{
+                background: 'black',
+                backgroundColor: 'black',
+                borderRadius: 15,
+                fontSize: 28,
+                fontWeight: 300,
+                padding: '7px 49px',
+                minWidth: 250,
+              }}
+            >
+              Envoyer
+            </button>
+          </div>
+        </div>
+      </div>
       <SvgWaves />
       <div
         style={{
-          color: 'white !important',
+          color: 'black',
           padding: '20px',
           margin: '0px',
-          backgroundColor: '#004e98',
+          fontSize: 20,
         }}
       >
-        <ul
+        <div
           style={{
             width: '100%',
             display: 'flex',
-            listStyle: 'none',
-            gap: '25px',
+            justifyContent: 'space-between',
+            gap: '30px',
             flexWrap: 'wrap',
+            padding: 165,
           }}
         >
-          <li style={{ flex: '1 1 250px', textAlign: 'center' }}>
-            Conditions générales
-          </li>
-          <li style={{ flex: '1 1 250px', textAlign: 'center' }}>
-            Politique de confidentialité
-          </li>
-          <li style={{ flex: '1 1 250px', textAlign: 'center' }}>NetBuddies</li>
-        </ul>
-        <hr style={{ margin: '30px 0px' }} />
-        <div style={{ textAlign: 'center', margin: '0px' }}>
-          <span>© 2021 ByteBuddies</span>
+          <ul
+            style={{
+              listStyle: 'none',
+              gap: 10,
+            }}
+          >
+            <li
+              style={{
+                color: '#004E98',
+                marginBottom: 10,
+                fontSize: 24,
+                lineHeight: '36px',
+              }}
+            >
+              Product
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Application web
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Application mobile
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              UX/UI design
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Big data
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Infrastructure as code
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Business intelligence
+            </li>
+          </ul>
+          <ul
+            style={{
+              listStyle: 'none',
+            }}
+          >
+            <li
+              style={{
+                color: '#004E98',
+                marginBottom: 10,
+                fontSize: 24,
+                lineHeight: '36px',
+              }}
+            >
+              Clients
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Médecins du monde
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              MonBo Réseau
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Blockus
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              ...
+            </li>
+          </ul>
+          <ul
+            style={{
+              listStyle: 'none',
+            }}
+          >
+            <li
+              style={{
+                color: '#004E98',
+                marginBottom: 10,
+                fontSize: 24,
+                lineHeight: '36px',
+              }}
+            >
+              Demande
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Contact
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Partenariat
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Devis
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Démonstration
+            </li>
+          </ul>
+          <ul
+            style={{
+              listStyle: 'none',
+            }}
+          >
+            <li
+              style={{
+                color: '#004E98',
+                marginBottom: 10,
+                fontSize: 24,
+                lineHeight: '36px',
+              }}
+            >
+              Pages
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Produits
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Références
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Equipe
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Tarifs
+            </li>
+            <li
+              style={{
+                marginBottom: 10,
+                lineHeight: '30px',
+              }}
+            >
+              Contact
+            </li>
+          </ul>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            margin: '30px 0px',
+          }}
+        >
+          <Link
+            href={'/background.png'}
+            style={{ display: 'flex', alignItems: 'center' }}
+          >
+            <img height={26} src={'/background_black.png'} alt={'NetBuddies'} />
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              style={{
+                marginLeft: '15px',
+                color: 'black',
+                fontSize: '24px',
+                fontWeight: '400',
+              }}
+            >
+              NetBuddies
+            </motion.h1>
+          </Link>
         </div>
       </div>
     </footer>
@@ -39,15 +343,15 @@ export default function Footer() {
 const SvgWaves = () => (
   <svg
     id="wave"
-    style={{ transform: 'rotate(0deg)', transition: '0.3' }}
+    style={{ transform: 'rotate(180deg)', transition: '0.3' }}
     viewBox="0 0 1440 170"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
   >
     <defs>
       <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-        <stop stop-color="rgba(0, 78, 152, 1)" offset="0%"></stop>
-        <stop stop-color="rgba(2, 19, 72, 1)" offset="100%"></stop>
+        <stop stop-color="#F3F4F6" offset="0%"></stop>
+        <stop stop-color="#F3F4F6" offset="100%"></stop>
       </linearGradient>
     </defs>
     <path

@@ -12,18 +12,14 @@ export function ComponentBlocksBlocksHero({
 }: ComponentBlocksBlocksHeroProps) {
   return (
     <div className={'hero-block'}>
-      <motion.div
-        className={'image-container'}
-        style={{
-          backgroundImage: `url(${block?.Media?.data[0]?.attributes?.url})`,
-        }}
-      >
+      <motion.div className={'image-container'}>
         <div
+          className={'image'}
           style={{
-            paddingInline: '85px',
-            paddingTop: '200px',
+            backgroundImage: `url(${block?.Media?.data[0]?.attributes?.url})`,
           }}
-        >
+        ></div>
+        <div className={'overlay'}>
           <h1 style={{ marginBottom: 85 }} className={'title'}>
             PENSER VOTRE OUTIL NOUS LE REALISONS
           </h1>
@@ -32,7 +28,6 @@ export function ComponentBlocksBlocksHero({
               backgroundColor: 'white',
               color: 'black',
               fontWeight: 400,
-              fontSize: 24,
               padding: '15px 30px',
             }}
             className={'outline'}

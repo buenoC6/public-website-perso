@@ -1,7 +1,8 @@
 // @ts-ignore
-export function Section({ children, primary = false, id }) {
+export function Section({ children, primary = false, id, style = undefined }) {
   return (
     <section
+      style={style}
       className={primary ? 'section-primary' : 'section-secondary'}
       id={id}
     >

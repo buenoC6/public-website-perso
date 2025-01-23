@@ -32,7 +32,7 @@ export function Header() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
-          style={{ marginLeft: '10px', fontSize: '24px', color: 'white' }}
+          style={{ marginLeft: '10px', color: 'white' }}
         >
           NetBuddies
         </motion.h1>
@@ -45,7 +45,7 @@ export function Header() {
       >
         <ul>
           {['Produits', 'Références', 'Equipe', 'Tarifs'].map((item, index) => (
-            <motion.li key={item} whileTap={{ scale: 0.95 }}>
+            <motion.li key={item}>
               <Link href={'/'}>{item}</Link>
             </motion.li>
           ))}
@@ -61,7 +61,7 @@ export function Header() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.1 }}
         whileTap={{ scale: 1.1 }}
-        style={{ cursor: 'pointer', height: '37px' }}
+        style={{ cursor: 'pointer' }}
       >
         <BurgerIcon />
       </motion.span>
